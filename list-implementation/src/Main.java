@@ -14,29 +14,13 @@ public class Main {
         list.add(3);
         list.add(4);
         list.add(5);
+        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 0, 0, 0, 0};
+        System.out.println(arr.length);
 
-        list.add(6,6);
+        list.add(4,6);
+        System.out.println();
 
-        list.remove(2);
-        list.remove(11);
-
-        System.out.println(list.contains(3));
         System.out.println(list);
-
-
-        MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add(1);
-        myLinkedList.add(2);
-        myLinkedList.add(3);
-
-        Node head = myLinkedList.getHead();
-        System.out.println(head);
-
-        System.out.println(head.getNext());
-        System.out.println(head.getNext().getNext());
-
-        Map<String, Integer> maps = new HashMap<>();
-        maps.put("SpiderMan", 1);
 
     }
 }
