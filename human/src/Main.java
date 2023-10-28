@@ -47,8 +47,8 @@ public class Main {
                 .map(human -> human.getMother().getName())
                 .toList();
 
-        System.out.println(parentNames);
-        System.out.println(motherNames);
+        System.out.println("Все Родители: " + parentNames);
+        System.out.println("Мамы: " + motherNames);
 
     }
 }
