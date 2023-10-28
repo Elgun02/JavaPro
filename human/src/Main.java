@@ -48,7 +48,7 @@ public class Main {
                 .toList();
 
         System.out.println("Все Родители: " + parentNames);
-        System.out.println("Мамы: " + motherNames);
+        System.out.println("Мамы старших 25-ти лет: " + motherNames);
 
     }
 }
