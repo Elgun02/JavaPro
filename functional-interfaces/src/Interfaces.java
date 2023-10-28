@@ -53,9 +53,5 @@ public class Interfaces {
         System.out.println(str.length());
         System.out.println(functional.apply(str));
 
-
-
-
-
     }
 }
