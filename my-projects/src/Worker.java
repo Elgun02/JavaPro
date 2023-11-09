@@ -11,8 +11,8 @@ public class Worker extends Person implements AbleToCalculatePension{
         this.maxSalary = maxSalary;
     }
 
-    public Worker(String name, int age, int minSalary, int maxSalary) {
-        super(name, age, minSalary, maxSalary);
+    public Worker(String name, int minSalary, int maxSalary, int age) {
+        super(name, minSalary, maxSalary, age);
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
     }

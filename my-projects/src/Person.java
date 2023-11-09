@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public abstract class Person {
-    private final String name;
+    private String name;
     private int age;
     private int growth;
     private double weight;
