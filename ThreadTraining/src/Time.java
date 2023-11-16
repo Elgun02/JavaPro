@@ -4,22 +4,24 @@ public class Time {
     private int hours = 0;
 
     public synchronized void threadSeconds() {
-        if (seconds == 60) {
-            seconds = 0;
+        if (seconds == 50) {
+            seconds = -10;
         }
         seconds += 10;
     }
 
     public synchronized void threadMinutes() {
-        if (minutes == 60) {
+        if (minutes == 59) {
             hours++;
             minutes = 0;
         }
         minutes++;
     }
 
-    public  synchronized void threadHours() {
-        hours++;
+    public void clear() {
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
     }
 
     public int getHours() {
