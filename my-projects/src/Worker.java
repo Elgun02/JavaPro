@@ -17,9 +17,16 @@ public class Worker extends Person implements AbleToCalculatePension{
         this.maxSalary = maxSalary;
     }
 
-    public Worker(){
+    public Worker(String workerInfo){
         super("", 0, 0, 0);
+        String[] arr = workerInfo.split(" ");
+
+        this.setName(arr[0]);
+        this.setMinSalary(Integer.parseInt(arr[1]));
+        this.setMaxSalary(Integer.parseInt(arr[2]));
+        this.setGender(Gender.valueOf(arr[3]));
     }
+
     @Override
     public void die() {
         System.out.println("Этот человек не дожил до пенсии");
@@ -88,9 +95,10 @@ public class Worker extends Person implements AbleToCalculatePension{
     @Override
     public String toString() {
         return "Worker{" +
-                "minSalary=" + minSalary +
+                "name=" + getName() +
+                ", minSalary=" + minSalary +
                 ", maxSalary=" + maxSalary +
-                ", profession=" + profession +
+                ", gender=" + getGender() +
                 '}';
     }
 }

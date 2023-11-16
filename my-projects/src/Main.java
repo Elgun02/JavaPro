@@ -1,14 +1,14 @@
+import java.io.FileNotFoundException;
 import java.time.DayOfWeek;
 import java.util.*;
 
 
 public class Main {
-    public static void main(String[] args) {
-        PensionFund pensionFund = new PensionFund("Finland Pension Fund", true, "1892");
-        Worker anna = new Worker("Anna", 19, 178, 62, 1000, 6000);
+    public static void main(String[] args) throws FileNotFoundException {
         List<Worker> membersList = new ArrayList<>();
         Set<Profession> professions = new HashSet<>();
         Map<DayOfWeek, Boolean> workDays = new HashMap<>();
+        CreateObject createObject = new CreateObject();
 
         workDays.put(DayOfWeek.MONDAY, true);
         workDays.put(DayOfWeek.TUESDAY, true);
@@ -18,8 +18,6 @@ public class Main {
         workDays.put(DayOfWeek.SATURDAY, false);
         workDays.put(DayOfWeek.SUNDAY, false);
 
-        pensionFund.setWorkDays(workDays);
-
         professions.add(Profession.PROGRAMMER);
         professions.add(Profession.DOCTOR);
         professions.add(Profession.ADVOCATE);
@@ -27,13 +25,9 @@ public class Main {
         professions.add(Profession.TEACHER);
         professions.add(Profession.RACER);
 
-        anna.setProfession(professions);
-        anna.setGender(Gender.MALE);
-        membersList.add(anna);
-        pensionFund.setMembersList(membersList);
+        createObject.generate();
 
-        pensionFund.info();
-        System.out.println(pensionFund.calculatePensionFor(anna));
+
 
     }
 }

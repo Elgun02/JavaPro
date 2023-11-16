@@ -41,6 +41,10 @@ public abstract class Person {
 
     abstract void die(int years);
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
