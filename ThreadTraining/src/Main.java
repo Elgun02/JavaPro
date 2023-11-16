@@ -36,7 +36,7 @@ public class Main {
            String input = sc.next();
            if (input.equals("/time")) {
                System.out.println("Прошло " + time.getHours() + " час, " + time.getMinutes() + " минут, " + time.getSeconds() + " секунд");
-           } else if (input.equals("/clear")) { // <- clear console.
+           } else if (input.equals("/clear")) { // <- cleanup console.
                time.clear();
            } else if (input.equals("3769")) { // скрытый пароль для разблокировки основного потока :)                                           <-  Пасхалка
                System.out.println("\u001B[33mОсновной поток разблокирован!\u001B[0m");
