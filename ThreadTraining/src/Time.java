@@ -3,14 +3,14 @@ public class Time {
     private int minutes = 0;
     private int hours = 0;
 
-    public synchronized void threadSeconds() {
+    public void threadSeconds() {
         if (seconds == 50) {
             seconds = -10;
         }
         seconds += 10;
     }
 
-    public synchronized void threadMinutes() {
+    public void threadMinutes() {
         if (minutes == 59) {
             hours++;
             minutes = 0;
@@ -22,6 +22,7 @@ public class Time {
         for (int i = 0; i < 50; i++) {
             System.out.println();
         }
+        System.out.println("\u001B[30mCconsole cleared.\u001B[0m");
     }
 
     public int getHours() {
