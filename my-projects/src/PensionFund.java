@@ -1,13 +1,12 @@
+import java.security.PublicKey;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class PensionFund {
     private String fundName;
     private boolean state;
-    private final String dateOfCreation;
+    private String dateOfCreation;
     private List<Worker> membersList;
     private Map<DayOfWeek, Boolean> workDays;
 
@@ -15,7 +14,14 @@ public class PensionFund {
         this.fundName = fundName;
         this.state = state;
         this.dateOfCreation = dateOfCreation;
+    }
 
+    public PensionFund(String pensionFundInfo) {
+        String[] arr = pensionFundInfo.split(", ");
+
+        this.fundName = arr[0];
+        this.state = Boolean.parseBoolean(arr[1]);
+        setterWorkDays();
     }
 
     public void info() {
@@ -26,8 +32,7 @@ public class PensionFund {
             System.out.println("Pension Fund CLOSED.");
         }
 
-        System.out.println();
-        System.out.println("Fund Name: " + fundName);
+        System.out.println("Fund Name: " + fundName + ".");
         System.out.println("Date of creation: " + dateOfCreation);
 
         int value = 1000;
@@ -38,31 +43,41 @@ public class PensionFund {
         } else System.out.println("Number of members: " + membersList.size());
     }
 
-    public double calculatePensionFor(AbleToCalculatePension obj) {
+    private double calculatePensionFor(AbleToCalculatePension obj) {
         if (isWorkDay(LocalDate.now().getDayOfWeek()) && state) {
-            System.out.print("The pension is equal to: ");
             return obj.calculatePension();
         } else {
-            System.out.println("Pension Fund is not working today.");
-            System.out.println("Money was stolen from the fund.");
-            System.out.print("The pension is equal to: ");
             return 0;
         }
     }
 
-    public boolean isWorkDay(DayOfWeek dayOfWeek) {
-        return workDays.getOrDefault(dayOfWeek, false);
-    }
-
-    public double calculateMedianPension() {
+    public int calculateMedianPension() {
         if (membersList == null) {
             return 0;
         }
-        double sum = 0.0;
+        int sum = 0;
         for (Worker worker : membersList) {
             sum += calculatePensionFor(worker);
         }
         return sum / membersList.size();
+    }
+
+    private void setterWorkDays() {
+        Map<DayOfWeek, Boolean> workDays = new HashMap<>();
+
+        workDays.put(DayOfWeek.MONDAY, true);
+        workDays.put(DayOfWeek.TUESDAY, true);
+        workDays.put(DayOfWeek.WEDNESDAY, true);
+        workDays.put(DayOfWeek.THURSDAY, true);
+        workDays.put(DayOfWeek.FRIDAY, true);
+        workDays.put(DayOfWeek.SATURDAY, false);
+        workDays.put(DayOfWeek.SUNDAY, true);
+
+        this.workDays = workDays;
+    }
+
+    public boolean isWorkDay(DayOfWeek dayOfWeek) {
+        return workDays.getOrDefault(dayOfWeek, false);
     }
 
     public String getFundName() {
@@ -85,6 +100,10 @@ public class PensionFund {
         return dateOfCreation;
     }
 
+    public void setDateOfCreation(String date) {
+        this.dateOfCreation = date;
+    }
+
     public List<Worker> getMembersList() {
         return membersList;
     }
@@ -92,7 +111,6 @@ public class PensionFund {
     public void setMembersList(List<Worker> membersList) {
         this.membersList = membersList;
     }
-
     public Map<DayOfWeek, Boolean> getWorkDays() {
         return workDays;
     }
@@ -116,11 +134,10 @@ public class PensionFund {
 
     @Override
     public String toString() {
-        return "PensionFund{" +
-                "fundName='" + fundName + '\'' +
-                ", state=" + state +
-                ", dateOfCreation='" + dateOfCreation + '\'' +
-                ", membersList=" + membersList +
-                '}';
+        return "[PensionFund: " +
+                "Name = '" + fundName + '\'' +
+                ", state = " + state +
+                ", membersList = " +  membersList.size() +
+                ']';
     }
 }

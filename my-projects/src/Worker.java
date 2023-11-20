@@ -25,6 +25,14 @@ public class Worker extends Person implements AbleToCalculatePension{
         this.setMinSalary(Integer.parseInt(arr[1]));
         this.setMaxSalary(Integer.parseInt(arr[2]));
         this.setGender(Gender.valueOf(arr[3]));
+        this.setAge(Integer.parseInt(arr[4]));
+    }
+
+    public void info() {
+        System.out.println("Имя: " + getName());
+        System.out.println("Возраст: " + getAge());
+        System.out.println("Пол: " + getGender());
+
     }
 
     @Override
@@ -50,8 +58,13 @@ public class Worker extends Person implements AbleToCalculatePension{
             pension = 0;
         }
 
-        int i = profession.size() / 3;
-        return (pension * (i * 0.05)) + pension;
+        if (profession == null) {
+            return pension;
+        }
+        else {
+            int i = profession.size() / 3;
+            return (pension * (i * 0.05)) + pension;
+        }
     }
 
     public int getMinSalary() {

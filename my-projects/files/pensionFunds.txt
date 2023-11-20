@@ -1,0 +1,100 @@
+Financial Peace Pension Plan, true
+Golden Years Wealth Management, true
+Prosperity and Peace Fund, false
+Golden Nest Egg Strategies, true
+Safe Retirement Solutions, false
+Secure Financial Future Plan, true
+Future Security Retirement Income, true
+Financial Independence Fund, true
+Golden Years Financial Stability, true
+Secure Retirement Investments, false
+Smart Retirement Savings, true
+Wise Investor Retirement Fund, true
+Golden Years Wealth Fund, false
+Financial Freedom Pension Plan, true
+Golden Years Savings Plan, true
+Golden Years Wealth Management, true
+Lifetime Income Assurance, true
+Lifetime Income Solutions, false
+Safe Retirement Solutions, false
+Lifetime Financial Well-being, false
+Lifelong Financial Freedom Fund, false
+Secure Financial Future Plan, false
+Safe and Sound Retirement Fund, false
+Retirement Lifestyle Solutions, false
+Financial Independence Fund, true
+Golden Years Wealth Fund, false
+Lifetime Security Fund, true
+Reliable Retirement Planning, true
+Golden Years Nest Egg Fund, true
+Assurance Retirement Portfolio, true
+Safe Retirement Solutions, false
+Comfortable Living Retirement Fund, false
+Wealth Builder Pension Plan, true
+Golden Years Financial Stability, true
+Wise Investor Retirement Fund, false
+Secure Retirement Investments, true
+Assurance Retirement Income, true
+Golden Years Financial Stability, true
+Golden Future Savings Plan, false
+Golden Years Wealth Fund, true
+Retirement Asset Management, true
+Wise Wealth Retirement Fund, true
+Retirement Nest Egg Security, true
+Wealth Assurance Pension Fund, true
+Financial Wellness Fund, false
+Retirement Security Fund, false
+Retirement Nest Egg Security, true
+Reliable Retirement Planning, false
+Reliable Retirement Planning, false
+Smart Retirement Planning, true
+Golden Years Wealth Fund, true
+Lifetime Income Assurance, true
+Prosperity in Retirement Fund, false
+Secure Horizon Pension Plan, true
+Safe Retirement Solutions, false
+Secure Retirement Income, true
+Assurance Retirement Income, true
+Safe Haven Retirement Fund, true
+Financial Independence Fund, false
+Assurance Retirement Portfolio, true
+Wealth Preservation Portfolio, false
+Lifelong Financial Security, false
+Smart Nest Egg Fund, false
+Smart Money Retirement Fund, false
+Secure Horizon Pension Plan, false
+Future Financial Freedom Portfolio, false
+Pension Wealth Builder Fund, false
+Comfortable Lifestyle Savings, true
+Comfortable Retirement Income, true
+Financial Freedom Pension Plan, true
+Golden Years Financial Stability, true
+Financial Wellness Fund, false
+Retirement Lifestyle Solutions, true
+Pension Wealth Builder Fund, true
+Lifetime Financial Stability Fund, true
+Secure Retirement Investments, true
+Secure Retirement Nest Egg, false
+Future Security Savings Fund, false
+Smart Nest Egg Retirement Plan, false
+Financial Peace Retirement Plan, false
+Lifelong Security Retirement Fund, true
+Lifelong Security Retirement Fund, true
+Assurance Retirement Security, true
+Smart Retirement Planning, false
+Lifelong Financial Freedom Fund, false
+Secure Horizon Retirement Plan, true
+Future Financial Independence, false
+Golden Years Nest Egg Fund, true
+Lifetime Security Fund, false
+Lifetime Financial Stability, false
+Retirement Asset Management, false
+Secure Financial Future Plan, false
+Retirement Security Fund, false
+Golden Years Wealth Fund, true
+Lifelong Financial Freedom Fund, true
+Retirement Asset Growth, false
+Future Financial Freedom Portfolio, true
+Wealth Preservation Fund, true
+Comfortable Retirement Living, true
+Financial Wellness Fund, true

@@ -2,12 +2,13 @@ import java.io.*;
 import java.util.List;
 import java.util.Random;
 
-public class GeneratorPensionFund {
-    public static void main(String[] args) throws IOException {
+public class GeneratorPensionFundFile {
+
+    public void generate() throws IOException {
         Random random = new Random();
 
-        File fileForPensionFundNames = new File("pensionFundNames.txt");
-        File fileForGeneratedPensionFund = new File("generatedPensionFund.txt");
+        File fileForPensionFundNames = new File("files/pensionFundNames.txt");
+        File fileForGeneratedPensionFund = new File("files/pensionFunds.txt");
 
         FileReader fileReaderForNames = new FileReader(fileForPensionFundNames);
         FileWriter fileWriterForPensionFund = new FileWriter(fileForGeneratedPensionFund);
