@@ -14,10 +14,12 @@ public class Main {
         Search search = new Search();
         Scanner sc = new Scanner(System.in);
         boolean console = true;
+        System.out.println("\u001B[36mНапишите '/commands' для просмотра всех команд\u001B[0m");
         while (console) {
             System.out.print("\u001B[32mConsole: \u001B[0m");
             String input = sc.next();
 
+            // switch можно было сделать так ( case "something" ->, и без break, но оставил так для красоты.
             switch (input) {
                 case "/fund_size":               // <- Количество всех фондов
                     System.out.println("\u001B[33mКоличество Всех Фондов: \u001B[0m" + pensionFunds.size());
@@ -38,7 +40,7 @@ public class Main {
                 case "/average_pension":         // <- Средняя пенсия среди всех пенсионных фондов
                     System.out.println("\u001B[33mСредняя пенсия среди фондов: \u001B[0m" + (int) search.findAveragePension(pensionFunds));
                     break;
-                case "/average_pension_workers": // <- Средняя пенсия среди всех работников
+                case "/average_pension_w": // <- Средняя пенсия среди всех работников
                     System.out.println("\u001B[33mСредняя пенсия среди работников: \u001B[0m" + (int) search.findAveragePensionWorkers(workersList));
                     break;
                 case "/max_pension_25":          // <- Максимальная пенсия среди работников до 25 лет
@@ -61,6 +63,24 @@ public class Main {
                         System.out.println();
                     }
                     System.out.println("\u001B[35mConsole cleared.\u001B[0m");
+                    break;
+                case "/commands":
+                    System.out.println(
+                            """
+                                    \u001B[37m/fund_size\u001B[0m
+                                    \u001B[37m/member_size\u001B[0m
+                                    \u001B[37m/find_max_members\u001B[0m
+                                    \u001B[37m/find_name\u001B[0m
+                                    \u001B[37m/find_losers\u001B[0m
+                                    \u001B[37m/average_pension\u001B[0m
+                                    \u001B[37m/average_pension_w\u001B[0m
+                                    \u001B[37m/max_pension_25\u001B[0m
+                                    \u001B[37m/jr_worker\u001B[0m
+                                    \u001B[37m/senior_worker\u001B[0m
+                                    \u001B[37m/clear\u001B[0m
+                                    \u001B[37m/exit\u001B[0m
+                                            """
+                    );
                     break;
                 default:
                     System.out.println("\u001B[31mcommand not found\u001B[0m");
